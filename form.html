@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form{
+            margin:20px;
+            padding: 20px;
+            display:flex;
+            justify-content: center;
+            
+        }
+        h1{
+            text-align: center;
+        }
+        .table{
+            margin:20px;
+            padding: 20px;
+            display:grid;
+            justify-content: center;
+        }
+    </style>
+    <script>
+        var selectedrow=null;
+        function insertRow(){
+            var table=document.getElementById("table"),
+            newRow=table.insertRow(table.length),
+            cell1=newRow.insertCell(0),
+            cell2=newRow.insertCell(1),
+            cell3=newRow.insertCell(2),
+            cell4=newRow.insertCell(3),
+            name=document.getElementById("name").value;
+            email=document.getElementById("email").value;
+            dob=document.getElementById("dob").value;
+            age=document.getElementById("age").value;
+        cell1.innerHTML=name;
+        cell2.innerHTML=email;
+        cell3.innerHTML=dob;
+        cell4.innerHTML=age;
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Form</h1>
+    <section class="form" id="table">
+        <form onsubmit="event.preventDefault">
+        <label for="name" >Name:</label>
+        <input type="text" id="name" name="name" required pattern="[A-Za-z]+" title="only alphabet"><br>
+        <label for="email">Email_ID:</label>
+        <input type="email" id="email" required><br>
+        <label for="dob" >DOB:</label>
+        <input type="date" id="dob" required><br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" required><br><br>
+        <button onclick="insertRow()">Submit</button>
+        <input type="reset" value="Reset">
+        </form>
+    </section>
+    <div class="table">
+        <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Email_ID</th>
+            <th>DOB</th>
+            <th>Age</th>
+        </tr></table>
+    </div>
+</body>
+</html>
