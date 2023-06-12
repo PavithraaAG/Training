@@ -1,0 +1,35 @@
+//Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+var twoSum = function(nums, target) {
+    for (i=0;i<nums.length;i++){
+        for (j=0;j<nums.length;j++){
+            if (i !== j){
+                if(nums[i] + nums[j] == target){
+                return[i,j]
+                };
+            }   
+        };
+    };
+};
+//2
+var searchRange = function(nums, target) {
+    var result = [];
+    result[0] = find1(nums, target);
+    result[1] = find2(nums, target);
+
+  return result;
+};
+function find1(nums, target) {
+  var start = 0;
+  var end = nums.length - 1;
+  while (start <= end) {
+    var num = start + (end - start) / 2;
+    if (nums[num] >= target) {
+      end = num - 1;
+    } else {
+      start = num + 1;
+    }
+
+    if (nums[num] === target) {
+    }
+  }
+}
