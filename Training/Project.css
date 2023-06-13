@@ -1,0 +1,138 @@
+body{
+margin: 100px;
+padding:100px;
+background-color:rgba(240, 248, 255, 0.158);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    scale: 1.5;
+    left:50%;
+    
+}
+.sec1{
+    background-color: rgba(0, 0, 255, 0.63);
+    border-radius: 20px;
+    padding: 20px;
+    color: aliceblue;
+    
+    
+}
+.sec2{
+    padding: 20px;
+    background-color: aliceblue;
+    justify-content: center;
+    border-radius:10px ;
+   
+    
+}
+.sec3{
+    display:grid;
+    grid-template-rows:repeat(5,25px);
+    justify-content:center;
+    grid-gap: 10px;
+    
+}
+.box{
+    padding: 5px;
+    font-size:10px ;
+    border-radius: 5px;
+   
+}
+.box1{
+    background-color: rgba(255, 0, 200, 0.24);
+    color:rgb(248, 15, 54) ;
+}
+.box2{
+    background-color: rgba(204, 13, 163, 0.082);
+    color:yellow;
+}
+.box3{
+    background-color: #00ff552c;
+    color:green;
+}
+.box4{
+    background-color: rgba(47, 0, 255, 0.151);
+    color:blue;
+}
+.box5{
+    background-color: rgba(22, 6, 95, 0.952);
+    color:white
+    
+    
+}
+.per{height: 100px;
+  width: 100px;
+  background-color: #2612dd3a;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 15px;
+  position: relative;
+  top:20px;
+}
+.num1{
+    position:relative;
+    left:30px;
+    top:20px;
+    font-size: 40px;
+    font-style: oblique;
+}
+.num2{
+    position: relative;
+    font-size: 10px;
+    left:35px;
+    top:20px;
+}
+.your_result{
+    font-size: 10px;
+    position: relative;
+    left:40px;
+    top :10px;
+}
+.great{
+    position: relative;
+    top: 40px;
+    left:40px;
+}
+.content{
+    margin-top: 60px;
+    font-size: 10px;
+    }
+    
+        
+   
+    @media screen and (min-width:1366px){
+        .container{
+            display:flex;
+            justify-content: center;
+            scale: 1.5;
+            left:50%;
+            margin: 100px;   
+    }
+    }
+    @media screen and (min-width:387px){
+        body{
+                margin: 100px;
+                padding:10px;
+                background-color:rgba(240, 248, 255, 0.158);
+                }
+        .container{
+                display:flex;
+                flex-direction: column;   
+                justify-content: center;
+                width: 170px;
+                margin-top:50px
+            }
+       
+    }
+    @media screen and (min-width:1270px){
+        boby{
+            margin: 100px;
+            padding:10px;
+            background-color:rgba(240, 248, 255, 0.158);
+        }
+    }
+        
+    
+
