@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+<body>
+    <h1 id="show" >00 hr:00 min:00 sec</h1>
+    <button id="handler" onclick="startstop()">START</button>
+    <button onclick="reset()">RESET</button>
+<script>
+    let sec=0;
+    let min=0;
+    let hr=0;
+
+
+    let displaysec=0;
+    let displaymin=0;
+    let displayhr=0;
+
+
+    function watch(){
+        {
+            sec++;
+            if(sec/60===1)
+            {
+                sec=0;
+                min++;
+                if(min/60===1)
+                {
+                    min=0;
+                    hr++;
+                }
+            }
+        if(sec<10)
+        {
+            displaysec='0'+sec.toString();
+        }
+        else{
+            displaysec=sec;
+        }
+        if(min<10)
+        {
+            displaymin='0'+min.toString();
+        }
+        else{
+            displaymin=min;
+        }
+        if(hr<10)
+        {
+            displayhr='0'+hr.toString();
+        }
+        else{
+            displayhr=hr;
+        }
+        }
+        document.getElementById('show').innerHTML=displayhr+":"+displaymin+":"+displaysec
+    }
+    function startstop()
+    {
+        if(status == 'stopped')
+        {
+            interval=window.setInterval(watch,1000)
+            document.getElementById('handler').innerHTML='stop';
+            status='started';
+
+        }
+        else if(status=='started')
+        {
+            window.clearInterval(interval);
+            document.getElementById('handler').innerHTML='start';
+            status='stopped';
+        }
+    }
+
+    
+</script>
+</body>
+</html>
