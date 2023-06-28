@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STOP CLOCK</title>
+    <style>
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>STOP CLOCK</h1>
+    <p id = 'demo'></p>
+    <button id = 'stop'> stop</button>
+    <button onclick="myTimer()" id = 'start' > start </button>
+    <script>
+    var myInterval = setInterval(myTimer, 1000);
+    let i = 0;
+function myTimer() {
+  document.getElementById("demo").innerHTML = i;
+  i++;
+}
+document.getElementById('stop').addEventListener('click',function(){
+    clearInterval(myInterval);
+    myInterval = null; //clean myInterval
+})
+document.getElementById('start').addEventListener('click',function(){
+    myInterval = setInterval(myTimer, 1000);
+})
+</script>
+</div>
+</body>
+</html>

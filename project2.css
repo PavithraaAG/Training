@@ -11,7 +11,7 @@
     row-gap: 100px;
     column-gap: 20px;
 }
-button:hover{
+hbutton:hover{
      background-color: black;
      color: white;
     
@@ -53,11 +53,17 @@ section{
 .section2{
     background-color: rgb(3, 3, 53);
 }
+
 .con{
     display:grid;
     justify-content:center;
     align-items: center;
     color:white;
+   
+}
+.photo2{
+    position:relative;
+    bottom:55px;
 }
 .section2{
     display:flex;
@@ -74,9 +80,90 @@ p{
     text-justify: center;
     font-size: 50px;
 }
-@media screen and(max-width: 600px){
-    body{
-        background-color: black;
+.photo{
+    display:block;
+}
+.photo1{
+    display: none;
+}
+
+@media only screen and (max-width:800px) {
+    .container{
+        display:grid;
+        row-gap: 50px;
+        column-gap: 20px;
+        font-weight: bold;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+        
+  }
+  .photo2{
+    position:relative;
+    bottom:300px;
+}
+   .sec1{
+    justify-content: space-evenly;
+  }
+  .sec2{
+    display:grid;
+    row-gap: 10px;
+    justify-content:space-evenly;
+  }
+  .para{
+    flex-direction: column;
+    font-size: 50px;
+    row-gap: 10px;
+}
+ 
+  .opacity{
+    opacity: 50%;
+   }
+   .sec3{
+    display:grid;
+    text-align: center;
+    grid-gap: 30px;
     }
-  
+    .section2{
+        display:grid;
+        border-radius: 3%;
+        margin-top:300px;
+    }
+.con{
+    display:grid;
+    justify-content:center;
+    align-items: center;
+    color:white;
+    row-gap: 20px;
+    text-align: center;
+    margin-top:-300px;
+    margin-bottom: 50px;
+    }
+    .con2{
+        font-size: 25px;
+    }
+    .con1{
+        text-justify: center;
+        font-size: 50px;
+    }
+    button:hover{
+        background-color: black;
+        color: white;
+    }
+    .photo{
+        display:none;
+    }
+    .photo1{
+        display:block;
+
+    }
+    .cap{
+        font-size: 70px;
+    }
+     
+    
+    
+    
+
 }

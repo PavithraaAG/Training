@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Java Script</h1>
+    <input type="text" id="text">
+    <input type="button" id="btn" onclick="addItem()" value="Add Task">
+    <script>
+        let input=document.getElementById('text')
+        function loader(bool) {
+        let btn = document.getElementById("btn");
+        if (bool) {
+          btn.value = "Loading!!!";
+          btn.disabled = true;
+        } else {
+          btn.value = "Add";
+          btn.disabled = false;
+        }
+      }
+        function triggerfn(task){
+            return new Promise(function(resolve,reject){
+                loader(true)
+                setTimeout(function(){
+                if(task.length<=10){
+                    resolve(task)
+                }
+                else{
+                    reject("length must be 10 character")
+                }
+                loader(false)
+            },2000);
+            });
+        }
+        function addtaskres(itemval){
+            h4=document.createElement("h4")
+            h4.innerhtml=itemval;
+            document.body.appendChild(h4);
+        }
+        function addItem(){
+        let task=input.value
+        triggerfn(task)
+        .then(function(data){
+            addtaskres(data);
+            input.value='';
+        })
+        .catch(function(err){
+            alert(err);
+        })
+        }
+    </script>
+</body>
+</html>            

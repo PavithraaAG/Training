@@ -23,26 +23,7 @@
             justify-content: center;
         }
     </style>
-    <script>
-        var selectedrow=null;
-        function insertRow(){
-            var table=document.getElementById("table"),
-            newRow=table.insertRow(table.length),
-            cell1=newRow.insertCell(0),
-            cell2=newRow.insertCell(1),
-            cell3=newRow.insertCell(2),
-            cell4=newRow.insertCell(3),
-            name=document.getElementById("name").value;
-            email=document.getElementById("email").value;
-            dob=document.getElementById("dob").value;
-            age=document.getElementById("age").value;
-        cell1.innerHTML=name;
-        cell2.innerHTML=email;
-        cell3.innerHTML=dob;
-        cell4.innerHTML=age;
-        }
-
-    </script>
+    
 </head>
 <body>
     <h1>Form</h1>
@@ -69,5 +50,26 @@
             <th>Age</th>
         </tr></table>
     </div>
+    <script>
+        var selectedRow=null;
+        function insertRow(){
+            var table=document.getElementById("table"),
+            newRow=table.insertRow(table.length),
+            cell1=newRow.insertCell(0),
+            cell2=newRow.insertCell(1),
+            cell3=newRow.insertCell(2),
+            cell4=newRow.insertCell(3),
+            cell5=newRow.insertCell(4),
+            name=document.getElementById("name").value,
+            email=document.getElementById("email").value,
+            dob=document.getElementById("dob").value,
+            age=document.getElementById("age").value;
+        cell1.innerHTML=name;
+        cell2.innerHTML=email;
+        cell3.innerHTML=dob;
+        cell4.innerHTML=age;
+        cell5.innerHTML=`<button onclick="onEdit(this)">EDIT</button>
+                        <button> onclick="onDelete(this)">DELETE</button>`;}
+    </script>
 </body>
 </html>
